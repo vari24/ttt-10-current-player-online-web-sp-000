@@ -1,12 +1,18 @@
 def turn_count(board)
   counter = 0
-  if my_condition_is_met
+  board.each do |space|
+    if space == "X" || space == "O"
     counter += 1
   end
+end
+return counter
+end
 
 def current_player(board)
-  if turn_count % 2 == 0
-    puts "X"
+  counter = turn_count(board) 
+  if counter % 2 == 0
+    return "X"
   else
-    puts "O"
+    return "O"
   end
+end
